@@ -1,9 +1,50 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ônix Rumo ao Campori 2027</title><meta name="description" content="Ajude o Clube de Desbravadores Ônix a conquistar os 789 km da viagem para o Campori 2027."><link rel="stylesheet" href="style.css"></head><body>
-<header class="hero"><img src="assets/logo-onix.png" class="logo" alt="Logo Clube Ônix"><p class="eyebrow">CLUBE DE DESBRAVADORES ÔNIX</p><h1>Rumo ao Campori 2027</h1><p class="route">SOROCABA → BARRETOS → SOROCABA</p><p>Ajude nosso ônibus a conquistar os <strong>789 km</strong> dessa viagem.</p><a class="btn" href="#ajudar">Quero ajudar o Ônix</a></header>
-<main><section class="card progress"><h2>Nossa viagem</h2><div class="money"><strong id="raised">R$ 0,00</strong><span> de <b>R$ 14.000,00</b></span></div><div class="track"><div id="fill"></div><span id="bus">🚌</span></div><div class="cities"><span>Sorocaba</span><span>Barretos</span><span>Sorocaba</span></div><div class="stats"><div><b id="pct">0%</b><small>da meta</small></div><div><b id="km">0 km</b><small>conquistados</small></div><div><b id="remaining">R$ 14.000,00</b><small>faltam</small></div></div></section>
-<section id="ajudar"><h2>Faça parte dessa viagem</h2><p>Cada <strong>R$ 17,74</strong> representa aproximadamente 1 km. Quantos quilômetros você quer nos ajudar a conquistar?</p><div class="options"><button data-value="17.74">1 KM<small>R$ 17,74</small></button><button data-value="88.70">5 KM<small>R$ 88,70</small></button><button data-value="177.40">10 KM<small>R$ 177,40</small></button><button data-value="354.80">20 KM<small>R$ 354,80</small></button></div><label>Outro valor (R$)<input id="custom" type="number" min="1" step="0.01" placeholder="100,00"></label><p id="impact" class="impact">Escolha um valor para ver quantos quilômetros sua ajuda representa.</p></section>
-<section class="card contribution"><h2>Contribua pelo 7me</h2><p>Escolha acima quantos quilômetros deseja ajudar. Depois, copie o valor e continue para o 7me para finalizar sua contribuição pelo canal oficial da igreja.</p><div id="selectedContribution" class="selected-contribution"><span>Valor escolhido</span><strong id="selectedValue">Escolha uma opção acima</strong></div><button class="btn disabled" id="copyValue" disabled>Copiar valor</button><a class="btn secondary disabled-link" id="go7me" href="#" aria-disabled="true">Continuar para o 7me</a><p id="sevenMeNotice" class="muted">O link oficial do 7me será adicionado em breve.</p><div class="steps"><p><b>1.</b> Escolha o valor da sua ajuda.</p><p><b>2.</b> Copie o valor.</p><p><b>3.</b> Acesse o 7me.</p><p><b>4.</b> Digite ou cole o valor e finalize a contribuição.</p></div><a class="btn secondary" id="proof" target="_blank">Enviar comprovante pelo WhatsApp</a></section>
-<section><h2>Por que R$ 14.000?</h2><p>O valor desta campanha será destinado exclusivamente ao transporte de ônibus do Clube Ônix para o Campori Sul-Americano de Desbravadores 2027, em Barretos/SP.</p><div class="goal">🚌 <strong>TRANSPORTE DO ÔNIBUS</strong><b>R$ 14.000,00</b></div></section>
-<section class="card"><h2>Conheça o Ônix</h2><p>Fundado em 2003, o Clube de Desbravadores Ônix trabalha com crianças e adolescentes de 10 a 15 anos, promovendo desenvolvimento físico, mental e espiritual por meio de atividades, aventuras, serviço à comunidade e contato com a natureza.</p><p class="muted">As fotos do clube serão adicionadas aqui posteriormente.</p></section>
-<section class="final"><h2>789 KM. UMA VIAGEM.<br>MUITAS HISTÓRIAS PARA VIVER.</h2><a class="btn" href="#ajudar">Quero conquistar um km</a></section></main>
-<footer><img src="assets/logo-onix.png" alt="Logo Ônix"><p>Clube de Desbravadores Ônix • Sorocaba/SP</p><a href="https://instagram.com/desbravadores_onix_sorocaba" target="_blank">@desbravadores_onix_sorocaba</a></footer><a id="wa" class="wa" target="_blank" aria-label="WhatsApp">WhatsApp</a><script src="config.js"></script><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ônix Rumo ao Campori 2027</title><meta name="description" content="Ajude o Clube de Desbravadores Ônix a conquistar os 789 km da viagem para o Campori Sul-Americano 2027.">
+<meta property="og:title" content="Ônix Rumo ao Campori 2027"><meta property="og:description" content="Ajude nosso ônibus a conquistar 789 km até o Campori 2027."><meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css"></head><body>
+<header class="hero">
+  <nav><img src="assets/logo-onix.png" class="nav-logo" alt="Logo Clube Ônix"><a href="#ajudar" class="mini-btn">Quero ajudar</a></nav>
+  <div class="hero-content"><p class="eyebrow">CLUBE DE DESBRAVADORES ÔNIX</p><h1>ÔNIX RUMO AO<br><span>CAMPORI 2027</span></h1><p class="route">SOROCABA <b>→</b> BARRETOS <b>→</b> SOROCABA</p><p class="lead">Ajude nosso ônibus a percorrer os <strong>789 km</strong> dessa viagem.</p>
+  <div class="hero-numbers"><div><strong id="heroRaised">R$ 0</strong><small>arrecadados</small></div><div><strong>R$ 14 mil</strong><small>nossa meta</small></div><div><strong>R$ 17,74</strong><small>≈ 1 km</small></div></div>
+  <a class="btn" href="#ajudar">Quero conquistar quilômetros</a></div>
+</header>
+<main>
+<section class="card journey"><div class="section-head"><div><span class="tag">NOSSA VIAGEM</span><h2>Veja até onde já chegamos</h2></div><strong id="pctBig">0%</strong></div>
+  <div class="road-wrap"><div class="road"><div id="roadFill" class="road-fill"></div><span id="bus" class="bus">🚌</span><span class="pin start">Sorocaba</span><span class="pin middle">Barretos 🏕️</span><span class="pin end">Sorocaba 🏠</span></div></div>
+  <div class="milestones"><span>0%</span><span>25%</span><span>50% • BARRETOS</span><span>75%</span><span>100%</span></div>
+  <p id="milestoneMessage" class="milestone-message">A viagem está só começando. Cada quilômetro conta! 💙</p>
+  <div class="stats"><div><b id="raised">R$ 0,00</b><small>arrecadados</small></div><div><b id="km">0 km</b><small>de 789 km</small></div><div><b id="remaining">R$ 14.000,00</b><small>ainda faltam</small></div></div>
+</section>
+
+<section id="ajudar" class="help"><span class="tag">FAÇA PARTE</span><h2>Quantos quilômetros você quer conquistar com o Ônix?</h2><p>Cada <strong>R$ 17,74</strong> representa aproximadamente 1 km da nossa jornada.</p>
+<div class="options"><button data-value="17.74" data-km="1"><b>1 KM</b><small>R$ 17,74</small></button><button data-value="88.70" data-km="5"><b>5 KM</b><small>R$ 88,70</small></button><button data-value="177.40" data-km="10"><b>10 KM</b><small>R$ 177,40</small></button><button data-value="354.80" data-km="20"><b>20 KM</b><small>R$ 354,80</small></button></div>
+<label class="custom-label">Ou escolha outro valor <span class="input-money">R$ <input id="custom" inputmode="decimal" type="number" min="1" step="0.01" placeholder="100,00"></span></label>
+<div id="impactBox" class="impact-box"><span>🚌</span><div><small>SUA AJUDA REPRESENTA</small><strong id="impact">Escolha um valor acima</strong><p id="impactText">O ônibus vai avançar simbolicamente junto com a sua contribuição.</p></div></div>
+</section>
+
+<section class="card contribution"><span class="tag">CONTRIBUIÇÃO OFICIAL</span><h2>Contribua pelo 7me</h2><div class="three-steps"><div><b>1</b><span>Escolha seus<br><strong>quilômetros</strong></span></div><i>→</i><div><b>2</b><span>Copie o<br><strong>valor</strong></span></div><i>→</i><div><b>3</b><span>Contribua pelo<br><strong>7me</strong></span></div></div>
+<div class="selected-contribution"><span>Valor para informar no 7me</span><strong id="selectedValue">Escolha uma opção acima</strong></div>
+<div class="action-row"><button class="btn disabled" id="copyValue" disabled>Copiar valor</button><a class="btn secondary disabled-link" id="go7me" href="#" aria-disabled="true">Continuar para o 7me ↗</a></div><p id="sevenMeNotice" class="muted">O link oficial do 7me será adicionado em breve.</p>
+<a class="text-link" id="proof" target="_blank">Já contribuí → enviar comprovante pelo WhatsApp</a>
+</section>
+
+<section class="why"><div><span class="tag">TRANSPARÊNCIA</span><h2>Por que R$ 14.000?</h2><p>Esta campanha é destinada <strong>exclusivamente ao transporte de ônibus</strong> do Clube Ônix para o Campori Sul-Americano de Desbravadores 2027, em Barretos/SP.</p></div><div class="goal"><span>🚌</span><small>TRANSPORTE DO ÔNIBUS</small><strong>R$ 14.000,00</strong></div></section>
+
+<section class="about"><span class="tag">CONHEÇA O ÔNIX</span><h2>Quem você está ajudando</h2><p>Fundado em 2003, o Clube de Desbravadores Ônix trabalha com crianças e adolescentes de 10 a 15 anos, promovendo desenvolvimento físico, mental e espiritual por meio de atividades, aventuras, serviço à comunidade e contato com a natureza.</p>
+<div class="gallery">
+  <figure><div class="photo-placeholder">FOTO 1<br><small>assets/foto-1.jpg</small></div><img src="assets/foto-1.jpg" alt="Atividade do Clube Ônix" onerror="this.style.display='none'"></figure>
+  <figure><div class="photo-placeholder">FOTO 2<br><small>assets/foto-2.jpg</small></div><img src="assets/foto-2.jpg" alt="Desbravadores do Clube Ônix" onerror="this.style.display='none'"></figure>
+  <figure><div class="photo-placeholder">FOTO 3<br><small>assets/foto-3.jpg</small></div><img src="assets/foto-3.jpg" alt="Momento do Clube Ônix" onerror="this.style.display='none'"></figure>
+  <figure><div class="photo-placeholder">FOTO 4<br><small>assets/foto-4.jpg</small></div><img src="assets/foto-4.jpg" alt="Clube Ônix em atividade" onerror="this.style.display='none'"></figure>
+</div></section>
+
+<section class="share-card"><span>💙</span><div><h2>Eu ajudei o Ônix a avançar!</h2><p id="shareHelpText">Depois de escolher sua contribuição, compartilhe a campanha e convide mais pessoas para essa viagem.</p></div><button id="shareHelp" class="btn secondary">Compartilhar campanha</button></section>
+
+<section class="accountability card"><div><span class="tag">PRESTAÇÃO DE CONTAS</span><h2>Campanha em números</h2></div><div class="account-grid"><p><small>META</small><b>R$ 14.000,00</b></p><p><small>ARRECADADO</small><b id="accountRaised">R$ 0,00</b></p><p><small>FALTA</small><b id="accountRemaining">R$ 14.000,00</b></p><p><small>ATUALIZADO EM</small><b id="updatedAt">—</b></p></div></section>
+
+<section class="final"><img src="assets/logo-onix.png" alt="Logo Ônix"><p>789 KM. UMA VIAGEM.</p><h2>MUITAS HISTÓRIAS<br>PARA VIVER.</h2><a class="btn" href="#ajudar">Quero conquistar um km</a></section>
+</main>
+<footer><img src="assets/logo-onix.png" alt="Logo Ônix"><p>Clube de Desbravadores Ônix • Sorocaba/SP</p><a id="instagramLink" target="_blank"></a><small>Rumo ao Campori Sul-Americano 2027</small></footer>
+<a id="wa" class="wa" target="_blank" aria-label="Falar pelo WhatsApp">WhatsApp</a>
+<script src="config.js"></script><script src="script.js"></script></body></html>
