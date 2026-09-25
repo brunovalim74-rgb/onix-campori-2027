@@ -44,24 +44,67 @@ async function renderSupporters(){
     empty.style.display=rows.length?'none':'block';
   }catch(e){empty.style.display='block';empty.textContent='Não foi possível carregar o mural agora. Tente novamente mais tarde.';}
 }
-async function submitSupporterMessage(e){
+async function submitSupporterMessage(e) {
   e.preventDefault();
-  const status=document.querySelector('#wallStatus'), btn=document.querySelector('#sendSupporterMessage');
-  if(!supabaseReady()){status.textContent='O mural ainda não foi ativado.';return;}
-  const nome=document.querySelector('#supporterName').value.trim();
-  const mensagem=document.querySelector('#supporterMessage').value.trim();
-  const consent=document.querySelector('#supporterConsent').checked;
-  if(!nome||!mensagem||!consent)return;
-  btn.disabled=true; status.textContent='Enviando...';
-  try{
-    const url=`${CAMPANHA.supabaseUrl.replace(/\/$/,'')}/rest/v1/mural`;
-    const r=await fetch(url,{method:'POST',headers:{...supabaseHeaders(),'Prefer':'return=minimal'},body:JSON.stringify({nome,mensagem,aprovado:false})});
-    if(!r.ok)throw new Error('Falha ao enviar');
-    e.target.reset(); status.textContent='Mensagem enviada! 💙 Ela aparecerá após a aprovação da equipe do Ônix.';
-  }catch(err){status.textContent='Não foi possível enviar agora. Tente novamente em alguns instantes.';}
-  finally{btn.disabled=false;}
-}
-function milestoneText(p){
+
+  const status = document.querySelector('#wallStatus');
+  const btn = document.querySelector('#sendSupporterMessage');
+
+  if (!supabaseReady()) {
+    status.textContent = 'O mural ainda não foi ativado.';
+    return;
+  }
+
+  const nome = document.querySelector('#supporterName').value.trim();
+  const mensagem = document.querySelector('#supporterMessage').value.trim();
+  const consent = document.querySelector('#supporterConsent').checked;
+
+  if (!nome || !mensagem || !consent) return;
+
+  btn.disabled = true;
+  status.textContent = 'Enviando...';
+
+  try {
+    const url =
+      `${CAMPANHA.supabaseUrl.replace(/\/$/, '')}/rest/v1/mural`;
+
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: {
+        ...supabaseHeaders(),
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({
+        nome,
+        mensagem,
+        aprovado: false
+      })
+    });
+
+    if (!r.ok) {
+      const erro = await r.text();
+      console.error('Erro Supabase:', r.status, erro);
+      throw new Error(erro);
+    }
+
+    e.target.reset();
+
+    status.textContent =
+      'Mensagem enviada! 💙 Ela aparecerá após a aprovação da equipe do Ônix.';
+
+  } catch (err) {
+
+    console.error(err);
+
+    status.textContent =
+      'ERRO: ' + err.message;
+
+  } finally {
+
+    btn.disabled = false;
+
+  }
+}function milestoneText(p){
   if(p>=1) return 'CONSEGUIMOS! 🚌💙 Nosso ônibus está garantido. Obrigado por fazer parte dessa viagem!';
   if(p>=.75) return 'Já estamos no caminho de volta! Falta pouco para completar nossa viagem. 🏠';
   if(p>=.5) return 'Chegamos a Barretos! 🏕️ Agora vamos conquistar o caminho de volta para Sorocaba.';
