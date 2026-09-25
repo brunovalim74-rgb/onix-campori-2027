@@ -32,7 +32,7 @@ async function renderSupporters(){
     return;
   }
   try{
-    const url=`${CAMPANHA.supabaseUrl.replace(/\/$/,'')}/rest/v1/mural?select=nome,mensagem,created_at&aprovado=eq.true&order=created_at.desc&limit=30`;
+    const url=`${CAMPANHA.supabaseUrl.replace(/\/$/,'')}/rest/v1/mural?select=nome,mensagem,criado_em&aprovado=eq.true&order=criado_em.desc&limit=30`;
     const r=await fetch(url,{headers:supabaseHeaders()}); if(!r.ok)throw new Error('Falha ao carregar');
     const rows=await r.json();
     rows.forEach(row=>{
