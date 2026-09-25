@@ -17,6 +17,6 @@ const CAMPANHA = {
 
   // MURAL COLABORATIVO (Supabase) — preencha depois seguindo o GUIA-MURAL.txt.
   // A chave anon é pública por definição; a segurança é feita pelas políticas RLS do Supabase.
-  supabaseUrl: "https://hekbgibxwahmlhnxcav.supabase.co",
+  supabaseUrl: "https://hekbgbibxwahmlhnxcav.supabase.co",
   supabaseAnonKey: "sb_publishable__UQeeELdGZFfapAqHJw4Kw_ZOIBUUup"
 };
