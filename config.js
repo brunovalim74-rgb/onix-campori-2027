@@ -10,7 +10,7 @@ const CAMPANHA = {
   dataPartida: "2027-01-11T23:00:00-03:00",
 
   // Cole entre as aspas o link oficial da contribuição no 7me.
-  link7me: "",
+  link7me: "https://7me.app/71/dc2pzr",
 
   whatsapp: "5515996674055",
   instagram: "desbravadores_onix_sorocaba",
