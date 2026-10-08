@@ -3,8 +3,8 @@ const CAMPANHA = {
   meta: 14000,
   distanciaTotal: 789,
   valorKm: 17.74,
-  valorArrecadado: 2.42, // use ponto para centavos: 1250.50
-  ultimaAtualizacao: "07/10/2026",
+  valorArrecadado: 5.42, // use ponto para centavos: 1250.50
+  ultimaAtualizacao: "08/10/2026",
 
   // Partida prevista. O contador usa o horário de Brasília (-03:00).
   dataPartida: "2027-01-11T23:00:00-03:00",
